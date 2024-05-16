@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VerificarPrimo
 {
@@ -10,21 +6,28 @@ namespace VerificarPrimo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("ingrese un numero");
-            int num;
-            num = Convert.ToInt16(Console.ReadLine());
-            int cont0 = 0;
-            int b = num / 2;
-            for (int i = 2; i <= b; i++)
+            Console.WriteLine("Ingrese un número:");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int divisor = 0;
+
+            for (int i = 2; i <= num / 2; i++)
             {
-                if (num % i != 0)
-                    cont0++;
+
+                if (num % i == 0)
+                {
+
+                    divisor++;
+ 
+                   
+                }
             }
-            if (cont0 == 0)
-                Console.WriteLine("ES PRIMO");
-            else Console.WriteLine("NO ES PRIMO");
+
+            if (divisor == 0)
+                Console.WriteLine("El número es PRIMO");
+            else
+                Console.WriteLine("El número NO es PRIMO");
+
             Console.ReadKey();
         }
-       
     }
 }
